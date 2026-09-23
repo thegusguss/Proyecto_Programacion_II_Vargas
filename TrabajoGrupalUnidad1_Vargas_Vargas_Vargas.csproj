@@ -46,16 +46,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Contacto.cs" />
+    <Compile Include="Ejercicios\FrmEjercicio03.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios\FrmEjercicio03.Designer.cs">
+      <DependentUpon>FrmEjercicio03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicios\FrmEjercicio07.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios\FrmEjercicio07.Designer.cs">
+      <DependentUpon>FrmEjercicio07.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="PanelPrincipalMDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PanelPrincipalMDI.Designer.cs">
+      <DependentUpon>PanelPrincipalMDI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Ejercicios\FrmEjercicio03.resx">
+      <DependentUpon>FrmEjercicio03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ejercicios\FrmEjercicio07.resx">
+      <DependentUpon>FrmEjercicio07.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelPrincipalMDI.resx">
+      <DependentUpon>PanelPrincipalMDI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

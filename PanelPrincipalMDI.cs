@@ -1,79 +1,103 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrabajoGrupalUnidad1_Vargas_Vargas_Vargas.Ejercicios;
 
 namespace TrabajoGrupalUnidad1_Vargas_Vargas_Vargas
 {
     public partial class PanelPrincipalMDI : Form
     {
-        private int childFormNumber = 0;
+        private string usuarioActual;
 
-        public PanelPrincipalMDI()
+        private int totalAperturas = 0;
+
+        private Dictionary<string, int> aperturasEjercicios =
+            new Dictionary<string, int>();
+
+        public PanelPrincipalMDI(string usuario)
         {
             InitializeComponent();
+            usuarioActual = usuario;
         }
 
-        private void ShowNewForm(object sender, EventArgs e)
+        private void PanelPrincipalMDI_Load(object sender, EventArgs e)
         {
-            Form childForm = new Form();
-            childForm.MdiParent = this;
-            childForm.Text = "Ventana " + childFormNumber++;
-            childForm.Show();
+            tsslUsuario.Text = "Usuario: " + usuarioActual;
+            tsslFechaHora.Text = DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss tt");
+
+            lblMasAbierto.Text = "Ninguno";
+            lblTotalAperturas.Text = "0";
+
+            tmrReloj.Start();
         }
 
-        private void OpenFile(object sender, EventArgs e)
+        private void tmrReloj_Tick(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            openFileDialog.Filter = "Archivos de texto (*.txt)|*.txt|Todos los archivos (*.*)|*.*";
-            if (openFileDialog.ShowDialog(this) == DialogResult.OK)
+            tsslFechaHora.Text = DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss tt");
+        }
+
+        private void AbrirFormulario<T>(string nombreEjercicio) where T : Form, new()
+        {
+            foreach (Form formularioAbierto in MdiChildren)
             {
-                string FileName = openFileDialog.FileName;
+                if (formularioAbierto is T)
+                {
+                    formularioAbierto.Activate();
+                    return;
+                }
             }
+
+            T formulario = new T();
+
+            formulario.MdiParent = this;
+            formulario.WindowState = FormWindowState.Maximized;
+
+            formulario.Show();
+
+            RegistrarAcceso(nombreEjercicio);
         }
 
-        private void SaveAsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void RegistrarAcceso(string ejercicio)
         {
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            saveFileDialog.Filter = "Archivos de texto (*.txt)|*.txt|Todos los archivos (*.*)|*.*";
-            if (saveFileDialog.ShowDialog(this) == DialogResult.OK)
+            string hora = DateTime.Now.ToString("HH:mm:ss");
+
+            ListViewItem fila = new ListViewItem(hora);
+            fila.SubItems.Add(ejercicio);
+
+            lvHistorial.Items.Add(fila);
+
+            totalAperturas++;
+
+            if (aperturasEjercicios.ContainsKey(ejercicio))
             {
-                string FileName = saveFileDialog.FileName;
+                aperturasEjercicios[ejercicio]++;
             }
+            else
+            {
+                aperturasEjercicios.Add(ejercicio, 1);
+            }
+
+            lblTotalAperturas.Text = totalAperturas.ToString();
+
+            var masAbierto = aperturasEjercicios
+                .OrderByDescending(x => x.Value)
+                .First();
+
+            string veces = masAbierto.Value == 1 ? "vez" : "veces";
+
+            lblMasAbierto.Text =
+                masAbierto.Key + " (" + masAbierto.Value + " " + veces + ")";
         }
 
-        private void ExitToolsStripMenuItem_Click(object sender, EventArgs e)
+        private void ejercicio02ConsumoDeAguaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+
         }
 
-        private void CutToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ejercicio03TablaDeMultiplicarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-        }
-
-        private void CopyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void PasteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void ToolBarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            toolStrip.Visible = toolBarToolStripMenuItem.Checked;
-        }
-
-        private void StatusBarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            statusStrip.Visible = statusBarToolStripMenuItem.Checked;
+            AbrirFormulario<FrmEjercicio03>("Tabla de Multiplicar");
         }
 
         private void CascadeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -91,17 +115,17 @@ namespace TrabajoGrupalUnidad1_Vargas_Vargas_Vargas
             LayoutMdi(MdiLayout.TileHorizontal);
         }
 
-        private void ArrangeIconsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LayoutMdi(MdiLayout.ArrangeIcons);
-        }
-
         private void CloseAllToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            foreach (Form childForm in MdiChildren)
+            foreach (Form formulario in MdiChildren)
             {
-                childForm.Close();
+                formulario.Close();
             }
+        }
+
+        private void ejercicio07AgendaDeContactosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmEjercicio07>("Agenda de Contactos");
         }
     }
 }
