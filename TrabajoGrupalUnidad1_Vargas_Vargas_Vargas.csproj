@@ -59,6 +59,24 @@
     <Compile Include="Ejercicios\FrmEjercicio07.Designer.cs">
       <DependentUpon>FrmEjercicio07.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ejercicios\FrmEjercicio10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios\FrmEjercicio10.Designer.cs">
+      <DependentUpon>FrmEjercicio10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicios\FrmEjercicio11.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios\FrmEjercicio11.Designer.cs">
+      <DependentUpon>FrmEjercicio11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicios\FrmEjercicio12.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios\FrmEjercicio12.Designer.cs">
+      <DependentUpon>FrmEjercicio12.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +96,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ejercicios\FrmEjercicio07.resx">
       <DependentUpon>FrmEjercicio07.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ejercicios\FrmEjercicio10.resx">
+      <DependentUpon>FrmEjercicio10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ejercicios\FrmEjercicio11.resx">
+      <DependentUpon>FrmEjercicio11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ejercicios\FrmEjercicio12.resx">
+      <DependentUpon>FrmEjercicio12.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -110,6 +137,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ChatGPT Image 21 sept 2026, 08_50_20 p.m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pila-de-tres-monedas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\papel-moneda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\suma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\numero-3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

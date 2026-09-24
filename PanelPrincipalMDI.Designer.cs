@@ -55,12 +55,12 @@
             this.tsslUsuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslFechaHora = new System.Windows.Forms.ToolStripStatusLabel();
             this.pnlHistorial = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTotalAperturas = new System.Windows.Forms.Label();
+            this.lblMasAbierto = new System.Windows.Forms.Label();
             this.lvHistorial = new System.Windows.Forms.ListView();
             this.FHora = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.FEjercicio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lblMasAbierto = new System.Windows.Forms.Label();
-            this.lblTotalAperturas = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.pnlHistorial.SuspendLayout();
@@ -158,18 +158,21 @@
             this.ejercicio10EvaluaciónEPSToolStripMenuItem.Name = "ejercicio10EvaluaciónEPSToolStripMenuItem";
             this.ejercicio10EvaluaciónEPSToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
             this.ejercicio10EvaluaciónEPSToolStripMenuItem.Text = "Ejercicio 10 - Evaluación EPS";
+            this.ejercicio10EvaluaciónEPSToolStripMenuItem.Click += new System.EventHandler(this.ejercicio10EvaluaciónEPSToolStripMenuItem_Click);
             // 
             // ejercicio11PalabrasYFrasesToolStripMenuItem
             // 
             this.ejercicio11PalabrasYFrasesToolStripMenuItem.Name = "ejercicio11PalabrasYFrasesToolStripMenuItem";
             this.ejercicio11PalabrasYFrasesToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
             this.ejercicio11PalabrasYFrasesToolStripMenuItem.Text = "Ejercicio 11 - Palabras y Frases";
+            this.ejercicio11PalabrasYFrasesToolStripMenuItem.Click += new System.EventHandler(this.ejercicio11PalabrasYFrasesToolStripMenuItem_Click);
             // 
             // ejercicio12FizzBuzzToolStripMenuItem
             // 
             this.ejercicio12FizzBuzzToolStripMenuItem.Name = "ejercicio12FizzBuzzToolStripMenuItem";
             this.ejercicio12FizzBuzzToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
             this.ejercicio12FizzBuzzToolStripMenuItem.Text = "Ejercicio 12 - FizzBuzz";
+            this.ejercicio12FizzBuzzToolStripMenuItem.Click += new System.EventHandler(this.ejercicio12FizzBuzzToolStripMenuItem_Click);
             // 
             // ejercicio13ClasificaciónDeEmpleadosToolStripMenuItem
             // 
@@ -262,14 +265,23 @@
             this.pnlHistorial.Size = new System.Drawing.Size(380, 805);
             this.pnlHistorial.TabIndex = 6;
             // 
-            // label1
+            // lblTotalAperturas
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(55, 46);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Historial de acceso";
+            this.lblTotalAperturas.AutoSize = true;
+            this.lblTotalAperturas.Location = new System.Drawing.Point(35, 597);
+            this.lblTotalAperturas.Name = "lblTotalAperturas";
+            this.lblTotalAperturas.Size = new System.Drawing.Size(137, 13);
+            this.lblTotalAperturas.TabIndex = 4;
+            this.lblTotalAperturas.Text = "Cantidad total de aperturas:";
+            // 
+            // lblMasAbierto
+            // 
+            this.lblMasAbierto.AutoSize = true;
+            this.lblMasAbierto.Location = new System.Drawing.Point(35, 456);
+            this.lblMasAbierto.Name = "lblMasAbierto";
+            this.lblMasAbierto.Size = new System.Drawing.Size(190, 13);
+            this.lblMasAbierto.TabIndex = 2;
+            this.lblMasAbierto.Text = "Ejercicio más abierto durante la sesión:";
             // 
             // lvHistorial
             // 
@@ -295,23 +307,14 @@
             this.FEjercicio.Text = "Ejercicio";
             this.FEjercicio.Width = 230;
             // 
-            // lblMasAbierto
+            // label1
             // 
-            this.lblMasAbierto.AutoSize = true;
-            this.lblMasAbierto.Location = new System.Drawing.Point(35, 456);
-            this.lblMasAbierto.Name = "lblMasAbierto";
-            this.lblMasAbierto.Size = new System.Drawing.Size(190, 13);
-            this.lblMasAbierto.TabIndex = 2;
-            this.lblMasAbierto.Text = "Ejercicio más abierto durante la sesión:";
-            // 
-            // lblTotalAperturas
-            // 
-            this.lblTotalAperturas.AutoSize = true;
-            this.lblTotalAperturas.Location = new System.Drawing.Point(35, 597);
-            this.lblTotalAperturas.Name = "lblTotalAperturas";
-            this.lblTotalAperturas.Size = new System.Drawing.Size(137, 13);
-            this.lblTotalAperturas.TabIndex = 4;
-            this.lblTotalAperturas.Text = "Cantidad total de aperturas:";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(55, 46);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(97, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Historial de acceso";
             // 
             // PanelPrincipalMDI
             // 

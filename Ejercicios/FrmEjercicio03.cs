@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace TrabajoGrupalUnidad1_Vargas_Vargas_Vargas.Ejercicios
@@ -128,6 +129,18 @@ namespace TrabajoGrupalUnidad1_Vargas_Vargas_Vargas.Ejercicios
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dgvTabla_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dgvTabla.Columns[e.ColumnIndex].HeaderText == "Múltiplo de 3" &&
+        e.Value != null &&
+        e.Value.ToString() == "Sí")
+            {
+                e.CellStyle.BackColor = Color.FromArgb(210, 250, 220);
+                e.CellStyle.ForeColor = Color.Green;
+                e.CellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            }
         }
     }
 }

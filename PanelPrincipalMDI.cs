@@ -127,5 +127,20 @@ namespace TrabajoGrupalUnidad1_Vargas_Vargas_Vargas
         {
             AbrirFormulario<FrmEjercicio07>("Agenda de Contactos");
         }
+
+        private void ejercicio10EvaluaciónEPSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmEjercicio10>("Evaluación EPS");
+        }
+
+        private void ejercicio11PalabrasYFrasesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmEjercicio11>("Palabras y Frases");
+        }
+
+        private void ejercicio12FizzBuzzToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
