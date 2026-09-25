@@ -55,22 +55,16 @@ namespace TrabajoGrupalUnidad1_Vargas_Vargas_Vargas.Ejercicios
             int restante = Convert.ToInt32(monto);
 
             int[] billetes = { 200, 100, 50, 20, 10 };
-
             dgvBilletes.Rows.Clear();
 
             for (int i = 0; i < billetes.Length; i++)
             {
                 int cantidad = restante / billetes[i];
-
                 restante = restante % billetes[i];
 
                 if (cantidad > 0)
                 {
-                    dgvBilletes.Rows.Add(
-                        "S/ " + billetes[i],
-                        cantidad
-                    );
-
+                    dgvBilletes.Rows.Add("S/ " + billetes[i], cantidad);
                     cantidadBilletes = cantidadBilletes + cantidad;
                 }
             }
@@ -93,7 +87,6 @@ namespace TrabajoGrupalUnidad1_Vargas_Vargas_Vargas.Ejercicios
             txtRetirado.Clear();
             txtCantidadBilletes.Clear();
             txtSaldoRestante.Clear();
-
             dgvBilletes.Rows.Clear();
 
             txtMonto.Focus();

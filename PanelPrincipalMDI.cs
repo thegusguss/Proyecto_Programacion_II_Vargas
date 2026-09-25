@@ -147,5 +147,10 @@ namespace TrabajoGrupalUnidad1_Vargas_Vargas_Vargas
         {
             AbrirFormulario<FrmEjercicio06>("Cajero Automático");
         }
+
+        private void ejercicio13ClasificaciónDeEmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmEjercicio13>("Clasificación de Empleados");
+        }
     }
 }

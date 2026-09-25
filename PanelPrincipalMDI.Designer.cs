@@ -181,6 +181,7 @@
             this.ejercicio13ClasificaciónDeEmpleadosToolStripMenuItem.Name = "ejercicio13ClasificaciónDeEmpleadosToolStripMenuItem";
             this.ejercicio13ClasificaciónDeEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(374, 26);
             this.ejercicio13ClasificaciónDeEmpleadosToolStripMenuItem.Text = "Ejercicio 13 - Clasificación de Empleados";
+            this.ejercicio13ClasificaciónDeEmpleadosToolStripMenuItem.Click += new System.EventHandler(this.ejercicio13ClasificaciónDeEmpleadosToolStripMenuItem_Click);
             // 
             // ejercicio14DatosDelEmpleadoToolStripMenuItem
             // 
