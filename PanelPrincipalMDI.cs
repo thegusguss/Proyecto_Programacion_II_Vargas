@@ -157,5 +157,10 @@ namespace TrabajoGrupalUnidad1_Vargas_Vargas_Vargas
         {
             AbrirFormulario<FrmEjercicio14>("Datos del Empleado");
         }
+
+        private void ejercicio16RegistroDeMatrículaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmEjercicio16>("Registro de Matrícula");
+        }
     }
 }

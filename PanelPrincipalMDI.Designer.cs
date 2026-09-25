@@ -73,7 +73,7 @@
             this.ejerciciosToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(1924, 28);
+            this.menuStrip.Size = new System.Drawing.Size(1924, 30);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
             // 
@@ -100,7 +100,7 @@
             this.ejercicio19MantenimientoDeProductosToolStripMenuItem,
             this.ejercicio20AltoOSigoToolStripMenuItem});
             this.ejerciciosToolStripMenuItem.Name = "ejerciciosToolStripMenuItem";
-            this.ejerciciosToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
+            this.ejerciciosToolStripMenuItem.Size = new System.Drawing.Size(85, 26);
             this.ejerciciosToolStripMenuItem.Text = "Ejercicios";
             // 
             // ejercicio02ConsumoDeAguaToolStripMenuItem
@@ -201,6 +201,7 @@
             this.ejercicio16RegistroDeMatrículaToolStripMenuItem.Name = "ejercicio16RegistroDeMatrículaToolStripMenuItem";
             this.ejercicio16RegistroDeMatrículaToolStripMenuItem.Size = new System.Drawing.Size(374, 26);
             this.ejercicio16RegistroDeMatrículaToolStripMenuItem.Text = "Ejercicio 16 - Registro de Matrícula";
+            this.ejercicio16RegistroDeMatrículaToolStripMenuItem.Click += new System.EventHandler(this.ejercicio16RegistroDeMatrículaToolStripMenuItem_Click);
             // 
             // ejercicio17TarifaDeTaxiToolStripMenuItem
             // 
@@ -266,10 +267,10 @@
             this.pnlHistorial.Controls.Add(this.lvHistorial);
             this.pnlHistorial.Controls.Add(this.label1);
             this.pnlHistorial.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlHistorial.Location = new System.Drawing.Point(1417, 28);
+            this.pnlHistorial.Location = new System.Drawing.Point(1417, 30);
             this.pnlHistorial.Margin = new System.Windows.Forms.Padding(4);
             this.pnlHistorial.Name = "pnlHistorial";
-            this.pnlHistorial.Size = new System.Drawing.Size(507, 993);
+            this.pnlHistorial.Size = new System.Drawing.Size(507, 991);
             this.pnlHistorial.TabIndex = 6;
             // 
             // lblTotalAperturas
