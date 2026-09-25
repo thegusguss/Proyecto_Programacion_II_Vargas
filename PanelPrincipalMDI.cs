@@ -152,5 +152,10 @@ namespace TrabajoGrupalUnidad1_Vargas_Vargas_Vargas
         {
             AbrirFormulario<FrmEjercicio13>("Clasificación de Empleados");
         }
+
+        private void ejercicio14DatosDelEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmEjercicio14>("Datos del Empleado");
+        }
     }
 }

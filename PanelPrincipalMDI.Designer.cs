@@ -188,6 +188,7 @@
             this.ejercicio14DatosDelEmpleadoToolStripMenuItem.Name = "ejercicio14DatosDelEmpleadoToolStripMenuItem";
             this.ejercicio14DatosDelEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(374, 26);
             this.ejercicio14DatosDelEmpleadoToolStripMenuItem.Text = "Ejercicio 14 - Datos del Empleado";
+            this.ejercicio14DatosDelEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.ejercicio14DatosDelEmpleadoToolStripMenuItem_Click);
             // 
             // ejercicio15SistemaDeVotaciónToolStripMenuItem
             // 
