@@ -92,7 +92,7 @@ namespace TrabajoGrupalUnidad1_Vargas_Vargas_Vargas
 
         private void ejercicio02ConsumoDeAguaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            AbrirFormulario<FrmEjercicio02>("Consumo de Agua");
         }
 
         private void ejercicio03TablaDeMultiplicarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -141,6 +141,11 @@ namespace TrabajoGrupalUnidad1_Vargas_Vargas_Vargas
         private void ejercicio12FizzBuzzToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ejercicio06CajeroAutomáticoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmEjercicio06>("Cajero Automático");
         }
     }
 }

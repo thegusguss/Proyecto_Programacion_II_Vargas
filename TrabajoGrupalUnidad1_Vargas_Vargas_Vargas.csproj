@@ -60,6 +60,12 @@
     <Compile Include="Ejercicios\FrmEjercicio03.Designer.cs">
       <DependentUpon>FrmEjercicio03.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ejercicios\FrmEjercicio06.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios\FrmEjercicio06.Designer.cs">
+      <DependentUpon>FrmEjercicio06.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ejercicios\FrmEjercicio07.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ejercicios\FrmEjercicio03.resx">
       <DependentUpon>FrmEjercicio03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ejercicios\FrmEjercicio06.resx">
+      <DependentUpon>FrmEjercicio06.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ejercicios\FrmEjercicio07.resx">
       <DependentUpon>FrmEjercicio07.cs</DependentUpon>
