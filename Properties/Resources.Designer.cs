@@ -83,6 +83,26 @@ namespace TrabajoGrupalUnidad1_Vargas_Vargas_Vargas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap llamada_telefonica {
+            get {
+                object obj = ResourceManager.GetObject("llamada-telefonica", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lupa {
+            get {
+                object obj = ResourceManager.GetObject("lupa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap numero_3 {
             get {
                 object obj = ResourceManager.GetObject("numero-3", resourceCulture);
@@ -113,6 +133,16 @@ namespace TrabajoGrupalUnidad1_Vargas_Vargas_Vargas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap sobre {
+            get {
+                object obj = ResourceManager.GetObject("sobre", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap subir {
             get {
                 object obj = ResourceManager.GetObject("subir", resourceCulture);
@@ -126,6 +156,26 @@ namespace TrabajoGrupalUnidad1_Vargas_Vargas_Vargas.Properties {
         internal static System.Drawing.Bitmap suma {
             get {
                 object obj = ResourceManager.GetObject("suma", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap taza {
+            get {
+                object obj = ResourceManager.GetObject("taza", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap usuario {
+            get {
+                object obj = ResourceManager.GetObject("usuario", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

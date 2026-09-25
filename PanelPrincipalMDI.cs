@@ -140,7 +140,12 @@ namespace TrabajoGrupalUnidad1_Vargas_Vargas_Vargas
 
         private void ejercicio12FizzBuzzToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            AbrirFormulario<FrmEjercicio12>("Fizz Buzz");
+        }
 
+        private void ejercicio15SistemaDeVotaciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmEjercicio15>("Sistema de Votación");
         }
     }
 }

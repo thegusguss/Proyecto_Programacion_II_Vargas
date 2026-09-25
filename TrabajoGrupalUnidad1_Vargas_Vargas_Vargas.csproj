@@ -77,6 +77,12 @@
     <Compile Include="Ejercicios\FrmEjercicio12.Designer.cs">
       <DependentUpon>FrmEjercicio12.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ejercicios\FrmEjercicio15.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios\FrmEjercicio15.Designer.cs">
+      <DependentUpon>FrmEjercicio15.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ejercicios\FrmEjercicio12.resx">
       <DependentUpon>FrmEjercicio12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ejercicios\FrmEjercicio15.resx">
+      <DependentUpon>FrmEjercicio15.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -152,6 +161,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\numero-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\llamada-telefonica.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sobre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\taza.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

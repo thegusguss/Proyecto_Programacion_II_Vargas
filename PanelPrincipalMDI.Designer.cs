@@ -191,6 +191,7 @@
             this.ejercicio15SistemaDeVotaciónToolStripMenuItem.Name = "ejercicio15SistemaDeVotaciónToolStripMenuItem";
             this.ejercicio15SistemaDeVotaciónToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
             this.ejercicio15SistemaDeVotaciónToolStripMenuItem.Text = "Ejercicio 15 - Sistema de Votación";
+            this.ejercicio15SistemaDeVotaciónToolStripMenuItem.Click += new System.EventHandler(this.ejercicio15SistemaDeVotaciónToolStripMenuItem_Click);
             // 
             // ejercicio16RegistroDeMatrículaToolStripMenuItem
             // 
