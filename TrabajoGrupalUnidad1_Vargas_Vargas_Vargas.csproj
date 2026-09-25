@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,6 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\Contacto.cs" />
+    <Compile Include="Ejercicios\FrmEjercicio02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios\FrmEjercicio02.Designer.cs">
+      <DependentUpon>FrmEjercicio02.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ejercicios\FrmEjercicio03.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +98,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Ejercicios\FrmEjercicio02.resx">
+      <DependentUpon>FrmEjercicio02.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ejercicios\FrmEjercicio03.resx">
       <DependentUpon>FrmEjercicio03.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,6 +162,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\numero-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar-sesion %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
