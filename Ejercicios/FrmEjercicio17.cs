@@ -16,6 +16,11 @@ namespace TrabajoGrupalUnidad1_Vargas_Vargas_Vargas.Ejercicios
         double totalRecaudado = 0, mayorCosto = 0, menorCosto = 0;
         bool viajeCalculado = false;
 
+        public FrmEjercicio17()
+        {
+            InitializeComponent();
+        }
+
         private void btnContinuar_Click(object sender, EventArgs e)
         {
             if (viajeCalculado == false)
@@ -92,11 +97,6 @@ namespace TrabajoGrupalUnidad1_Vargas_Vargas_Vargas.Ejercicios
             {
                 this.Close();
             }
-        }
-
-        public FrmEjercicio17()
-        {
-            InitializeComponent();
         }
 
         private void btnCalcular_Click(object sender, EventArgs e)

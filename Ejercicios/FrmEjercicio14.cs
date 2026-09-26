@@ -19,13 +19,9 @@ namespace TrabajoGrupalUnidad1_Vargas_Vargas_Vargas.Ejercicios
 
         private void btnDeterminar_Click(object sender, EventArgs e)
         {
-            int codigo;
-            int estadoCivil;
-            int edad;
-            int sexo;
+            int codigo, estadoCivil, edad, sexo;
 
-            string estadoCivilTexto;
-            string sexoTexto;
+            string estadoCivilTexto, sexoTexto;
 
             if (txtCodigo.Text == "")
             {
@@ -108,7 +104,6 @@ namespace TrabajoGrupalUnidad1_Vargas_Vargas_Vargas.Ejercicios
             txtEstadoCivil.Clear();
             txtEdad.Clear();
             txtSexo.Clear();
-
             txtCodigo.Focus();
         }
 
