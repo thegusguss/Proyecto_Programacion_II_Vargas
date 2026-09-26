@@ -30,6 +30,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblVotosEmitidos = new System.Windows.Forms.Label();
+            this.lblVotosPendientes = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.nudCantidadVotantes = new System.Windows.Forms.NumericUpDown();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -44,7 +46,11 @@
             this.lblVotosGanador = new System.Windows.Forms.Label();
             this.lblGanador = new System.Windows.Forms.Label();
             this.lblTextoGanador = new System.Windows.Forms.Label();
+            this.picGanador = new System.Windows.Forms.PictureBox();
             this.dgvResultados = new System.Windows.Forms.DataGridView();
+            this.colCandidato = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colVotos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPorcentaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
@@ -56,24 +62,18 @@
             this.tabVotacion = new System.Windows.Forms.TabControl();
             this.tabPageVotacion = new System.Windows.Forms.TabPage();
             this.tabPageResultados = new System.Windows.Forms.TabPage();
-            this.colCandidato = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colVotos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPorcentaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblVotosPendientes = new System.Windows.Forms.Label();
-            this.picGanador = new System.Windows.Forms.PictureBox();
-            this.lblVotosEmitidos = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidadVotantes)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picGanador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResultados)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.gbCandidatos.SuspendLayout();
             this.tabVotacion.SuspendLayout();
             this.tabPageVotacion.SuspendLayout();
             this.tabPageResultados.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picGanador)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -99,6 +99,24 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Configuracion de la Votacion";
+            // 
+            // lblVotosEmitidos
+            // 
+            this.lblVotosEmitidos.AutoSize = true;
+            this.lblVotosEmitidos.Location = new System.Drawing.Point(233, 77);
+            this.lblVotosEmitidos.Name = "lblVotosEmitidos";
+            this.lblVotosEmitidos.Size = new System.Drawing.Size(91, 13);
+            this.lblVotosEmitidos.TabIndex = 6;
+            this.lblVotosEmitidos.Text = "Votos registrados:";
+            // 
+            // lblVotosPendientes
+            // 
+            this.lblVotosPendientes.AutoSize = true;
+            this.lblVotosPendientes.Location = new System.Drawing.Point(346, 77);
+            this.lblVotosPendientes.Name = "lblVotosPendientes";
+            this.lblVotosPendientes.Size = new System.Drawing.Size(83, 13);
+            this.lblVotosPendientes.TabIndex = 5;
+            this.lblVotosPendientes.Text = "Votos restantes:";
             // 
             // label2
             // 
@@ -241,6 +259,15 @@
             this.lblTextoGanador.TabIndex = 1;
             this.lblTextoGanador.Text = "Ganador:";
             // 
+            // picGanador
+            // 
+            this.picGanador.Image = global::TrabajoGrupalUnidad1_Vargas_Vargas_Vargas.Properties.Resources.taza;
+            this.picGanador.Location = new System.Drawing.Point(36, 25);
+            this.picGanador.Name = "picGanador";
+            this.picGanador.Size = new System.Drawing.Size(70, 70);
+            this.picGanador.TabIndex = 0;
+            this.picGanador.TabStop = false;
+            // 
             // dgvResultados
             // 
             this.dgvResultados.AllowUserToAddRows = false;
@@ -260,6 +287,24 @@
             this.dgvResultados.Size = new System.Drawing.Size(529, 261);
             this.dgvResultados.TabIndex = 0;
             // 
+            // colCandidato
+            // 
+            this.colCandidato.HeaderText = "Candidato";
+            this.colCandidato.Name = "colCandidato";
+            this.colCandidato.ReadOnly = true;
+            // 
+            // colVotos
+            // 
+            this.colVotos.HeaderText = "Votos";
+            this.colVotos.Name = "colVotos";
+            this.colVotos.ReadOnly = true;
+            // 
+            // colPorcentaje
+            // 
+            this.colPorcentaje.HeaderText = "% del total";
+            this.colPorcentaje.Name = "colPorcentaje";
+            this.colPorcentaje.ReadOnly = true;
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.btnCerrar);
@@ -276,32 +321,51 @@
             // 
             // btnCerrar
             // 
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.ForeColor = System.Drawing.Color.White;
             this.btnCerrar.Location = new System.Drawing.Point(336, 434);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(109, 45);
             this.btnCerrar.TabIndex = 5;
             this.btnCerrar.Text = "Cerrar";
-            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnNuevo
             // 
+            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(252)))));
+            this.btnNuevo.FlatAppearance.BorderSize = 0;
+            this.btnNuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(228)))), ((int)(((byte)(243)))));
+            this.btnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(90)))));
             this.btnNuevo.Location = new System.Drawing.Point(178, 434);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(109, 45);
             this.btnNuevo.TabIndex = 4;
             this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnVotar
             // 
+            this.btnVotar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
+            this.btnVotar.FlatAppearance.BorderSize = 0;
+            this.btnVotar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVotar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVotar.ForeColor = System.Drawing.Color.White;
             this.btnVotar.Location = new System.Drawing.Point(19, 434);
             this.btnVotar.Name = "btnVotar";
             this.btnVotar.Size = new System.Drawing.Size(109, 45);
             this.btnVotar.TabIndex = 3;
             this.btnVotar.Text = "Votar";
-            this.btnVotar.UseVisualStyleBackColor = true;
+            this.btnVotar.UseVisualStyleBackColor = false;
             this.btnVotar.Click += new System.EventHandler(this.btnVotar_Click);
             // 
             // gbCandidatos
@@ -384,51 +448,6 @@
             this.tabPageResultados.Text = "Resultados";
             this.tabPageResultados.UseVisualStyleBackColor = true;
             // 
-            // colCandidato
-            // 
-            this.colCandidato.HeaderText = "Candidato";
-            this.colCandidato.Name = "colCandidato";
-            this.colCandidato.ReadOnly = true;
-            // 
-            // colVotos
-            // 
-            this.colVotos.HeaderText = "Votos";
-            this.colVotos.Name = "colVotos";
-            this.colVotos.ReadOnly = true;
-            // 
-            // colPorcentaje
-            // 
-            this.colPorcentaje.HeaderText = "% del total";
-            this.colPorcentaje.Name = "colPorcentaje";
-            this.colPorcentaje.ReadOnly = true;
-            // 
-            // lblVotosPendientes
-            // 
-            this.lblVotosPendientes.AutoSize = true;
-            this.lblVotosPendientes.Location = new System.Drawing.Point(346, 77);
-            this.lblVotosPendientes.Name = "lblVotosPendientes";
-            this.lblVotosPendientes.Size = new System.Drawing.Size(83, 13);
-            this.lblVotosPendientes.TabIndex = 5;
-            this.lblVotosPendientes.Text = "Votos restantes:";
-            // 
-            // picGanador
-            // 
-            this.picGanador.Image = global::TrabajoGrupalUnidad1_Vargas_Vargas_Vargas.Properties.Resources.taza;
-            this.picGanador.Location = new System.Drawing.Point(36, 25);
-            this.picGanador.Name = "picGanador";
-            this.picGanador.Size = new System.Drawing.Size(70, 70);
-            this.picGanador.TabIndex = 0;
-            this.picGanador.TabStop = false;
-            // 
-            // lblVotosEmitidos
-            // 
-            this.lblVotosEmitidos.AutoSize = true;
-            this.lblVotosEmitidos.Location = new System.Drawing.Point(233, 77);
-            this.lblVotosEmitidos.Name = "lblVotosEmitidos";
-            this.lblVotosEmitidos.Size = new System.Drawing.Size(91, 13);
-            this.lblVotosEmitidos.TabIndex = 6;
-            this.lblVotosEmitidos.Text = "Votos registrados:";
-            // 
             // FrmEjercicio15
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -446,6 +465,7 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picGanador)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResultados)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.gbCandidatos.ResumeLayout(false);
@@ -453,7 +473,6 @@
             this.tabVotacion.ResumeLayout(false);
             this.tabPageVotacion.ResumeLayout(false);
             this.tabPageResultados.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picGanador)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
