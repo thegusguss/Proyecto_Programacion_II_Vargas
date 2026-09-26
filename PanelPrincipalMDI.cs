@@ -167,5 +167,10 @@ namespace TrabajoGrupalUnidad1_Vargas_Vargas_Vargas
         {
             AbrirFormulario<FrmEjercicio17>("Tarifa de Taxi");
         }
+
+        private void ejercicio20AltoOSigoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmEjercicio20>("Alto o Sigo");
+        }
     }
 }
