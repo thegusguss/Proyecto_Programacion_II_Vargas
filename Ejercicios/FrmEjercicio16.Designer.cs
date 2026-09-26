@@ -45,6 +45,9 @@
             this.Carrera = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Turno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvErrores = new System.Windows.Forms.DataGridView();
+            this.Hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Campo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Detalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblCorreo = new System.Windows.Forms.Label();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.lblMatriculados = new System.Windows.Forms.Label();
@@ -64,9 +67,6 @@
             this.rdbManana = new System.Windows.Forms.RadioButton();
             this.rdbTarde = new System.Windows.Forms.RadioButton();
             this.rdbNoche = new System.Windows.Forms.RadioButton();
-            this.Hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Campo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Detalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.nudEdad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstudiantes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvErrores)).BeginInit();
@@ -235,6 +235,27 @@
             this.dgvErrores.Size = new System.Drawing.Size(649, 238);
             this.dgvErrores.TabIndex = 35;
             // 
+            // Hora
+            // 
+            this.Hora.HeaderText = "Hora";
+            this.Hora.MinimumWidth = 6;
+            this.Hora.Name = "Hora";
+            this.Hora.Width = 125;
+            // 
+            // Campo
+            // 
+            this.Campo.HeaderText = "Campo";
+            this.Campo.MinimumWidth = 6;
+            this.Campo.Name = "Campo";
+            this.Campo.Width = 125;
+            // 
+            // Detalle
+            // 
+            this.Detalle.HeaderText = "Detalle";
+            this.Detalle.MinimumWidth = 6;
+            this.Detalle.Name = "Detalle";
+            this.Detalle.Width = 200;
+            // 
             // lblCorreo
             // 
             this.lblCorreo.AutoSize = true;
@@ -298,7 +319,7 @@
             // 
             this.lblMatriculadoCarrera.AutoSize = true;
             this.lblMatriculadoCarrera.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMatriculadoCarrera.Location = new System.Drawing.Point(74, 936);
+            this.lblMatriculadoCarrera.Location = new System.Drawing.Point(795, 575);
             this.lblMatriculadoCarrera.Name = "lblMatriculadoCarrera";
             this.lblMatriculadoCarrera.Size = new System.Drawing.Size(226, 20);
             this.lblMatriculadoCarrera.TabIndex = 43;
@@ -309,7 +330,7 @@
             this.lstCarreras.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstCarreras.FormattingEnabled = true;
             this.lstCarreras.ItemHeight = 20;
-            this.lstCarreras.Location = new System.Drawing.Point(78, 977);
+            this.lstCarreras.Location = new System.Drawing.Point(799, 616);
             this.lstCarreras.Name = "lstCarreras";
             this.lstCarreras.Size = new System.Drawing.Size(260, 164);
             this.lstCarreras.TabIndex = 44;
@@ -442,32 +463,11 @@
             this.rdbNoche.Text = "Noche";
             this.rdbNoche.UseVisualStyleBackColor = true;
             // 
-            // Hora
-            // 
-            this.Hora.HeaderText = "Hora";
-            this.Hora.MinimumWidth = 6;
-            this.Hora.Name = "Hora";
-            this.Hora.Width = 125;
-            // 
-            // Campo
-            // 
-            this.Campo.HeaderText = "Campo";
-            this.Campo.MinimumWidth = 6;
-            this.Campo.Name = "Campo";
-            this.Campo.Width = 125;
-            // 
-            // Detalle
-            // 
-            this.Detalle.HeaderText = "Detalle";
-            this.Detalle.MinimumWidth = 6;
-            this.Detalle.Name = "Detalle";
-            this.Detalle.Width = 200;
-            // 
             // FrmEjercicio16
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1077, 1175);
+            this.ClientSize = new System.Drawing.Size(1306, 960);
             this.Controls.Add(this.gbxTurno);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnMatricular);
