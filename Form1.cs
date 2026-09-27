@@ -9,12 +9,16 @@ namespace TrabajoGrupalUnidad1_Vargas_Vargas_Vargas
         {
             InitializeComponent();
 
+            txtPassword.UseSystemPasswordChar = true;
             txtUsuario.Focus();
+
+            this.AcceptButton = btnIngresar;
+            this.CancelButton = btnSalir;
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            string usuario = txtUsuario.Text.Trim();
+            string usuario = txtUsuario.Text.Trim().ToLower();
             string contrasena = txtPassword.Text.Trim();
 
             if (usuario == "")
@@ -41,17 +45,20 @@ namespace TrabajoGrupalUnidad1_Vargas_Vargas_Vargas
                 return;
             }
 
-            if (usuario == "admin" && contrasena == "1234")
+            string nombreUsuario = ValidarUsuario(usuario, contrasena);
+
+            if (nombreUsuario != "")
             {
                 MessageBox.Show(
-                    "Acceso correcto.",
-                    "Bienvenido",
+                    "Bienvenido(a), " + nombreUsuario + ".",
+                    "Acceso correcto",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
 
                 this.Hide();
 
-                PanelPrincipalMDI panelPrincipal = new PanelPrincipalMDI(usuario);
+                PanelPrincipalMDI panelPrincipal =
+                    new PanelPrincipalMDI(nombreUsuario);
 
                 panelPrincipal.ShowDialog();
 
@@ -68,6 +75,26 @@ namespace TrabajoGrupalUnidad1_Vargas_Vargas_Vargas
                 txtPassword.Clear();
                 txtPassword.Focus();
             }
+        }
+
+        private string ValidarUsuario(string usuario, string contrasena)
+        {
+            if (usuario == "gustavo" && contrasena == "1234")
+            {
+                return "Gustavo Adolfo Vargas Calizaya";
+            }
+
+            if (usuario == "yadhira" && contrasena == "1234")
+            {
+                return "Yadhira Xiomara Shanik Vargas Maquera";
+            }
+
+            if (usuario == "mileyde" && contrasena == "1234")
+            {
+                return "Mileyde Melany Vargas Laura";
+            }
+
+            return "";
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
