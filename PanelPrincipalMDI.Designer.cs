@@ -121,12 +121,14 @@
             this.ejercicio04AdivinaElNúmeroToolStripMenuItem.Name = "ejercicio04AdivinaElNúmeroToolStripMenuItem";
             this.ejercicio04AdivinaElNúmeroToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
             this.ejercicio04AdivinaElNúmeroToolStripMenuItem.Text = "Ejercicio 04 - Adivina el Número";
+            this.ejercicio04AdivinaElNúmeroToolStripMenuItem.Click += new System.EventHandler(this.ejercicio04AdivinaElNúmeroToolStripMenuItem_Click);
             // 
             // ejercicio05PiedraPapelOTijeraToolStripMenuItem
             // 
             this.ejercicio05PiedraPapelOTijeraToolStripMenuItem.Name = "ejercicio05PiedraPapelOTijeraToolStripMenuItem";
             this.ejercicio05PiedraPapelOTijeraToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
             this.ejercicio05PiedraPapelOTijeraToolStripMenuItem.Text = "Ejercicio 05 - Piedra, Papel o Tijera";
+            this.ejercicio05PiedraPapelOTijeraToolStripMenuItem.Click += new System.EventHandler(this.ejercicio05PiedraPapelOTijeraToolStripMenuItem_Click);
             // 
             // ejercicio06CajeroAutomáticoToolStripMenuItem
             // 
@@ -147,12 +149,14 @@
             this.ejercicio08MatrizDeCalificacionesToolStripMenuItem.Name = "ejercicio08MatrizDeCalificacionesToolStripMenuItem";
             this.ejercicio08MatrizDeCalificacionesToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
             this.ejercicio08MatrizDeCalificacionesToolStripMenuItem.Text = "Ejercicio 08 - Matriz de Calificaciones";
+            this.ejercicio08MatrizDeCalificacionesToolStripMenuItem.Click += new System.EventHandler(this.ejercicio08MatrizDeCalificacionesToolStripMenuItem_Click);
             // 
             // ejercicio09CalificaciónFinalToolStripMenuItem
             // 
             this.ejercicio09CalificaciónFinalToolStripMenuItem.Name = "ejercicio09CalificaciónFinalToolStripMenuItem";
             this.ejercicio09CalificaciónFinalToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
             this.ejercicio09CalificaciónFinalToolStripMenuItem.Text = "Ejercicio 09 - Calificación Final";
+            this.ejercicio09CalificaciónFinalToolStripMenuItem.Click += new System.EventHandler(this.ejercicio09CalificaciónFinalToolStripMenuItem_Click);
             // 
             // ejercicio10EvaluaciónEPSToolStripMenuItem
             // 
@@ -215,6 +219,7 @@
             this.ejercicio18ControlDeInventarioToolStripMenuItem.Name = "ejercicio18ControlDeInventarioToolStripMenuItem";
             this.ejercicio18ControlDeInventarioToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
             this.ejercicio18ControlDeInventarioToolStripMenuItem.Text = "Ejercicio 18 - Control de Inventario";
+            this.ejercicio18ControlDeInventarioToolStripMenuItem.Click += new System.EventHandler(this.ejercicio18ControlDeInventarioToolStripMenuItem_Click);
             // 
             // ejercicio19MantenimientoDeProductosToolStripMenuItem
             // 

@@ -177,5 +177,30 @@ namespace TrabajoGrupalUnidad1_Vargas_Vargas_Vargas
         {
             AbrirFormulario<FrmEjercicio19>("Mantenimiento de Productos");
         }
+
+        private void ejercicio04AdivinaElNúmeroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmEjercicio04>("Adivina el Número");
+        }
+
+        private void ejercicio05PiedraPapelOTijeraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmEjercicio05>("Piedra, Papel o Tijera");
+        }
+
+        private void ejercicio08MatrizDeCalificacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmEjercicio08>("Matriz de Calificaciones");
+        }
+
+        private void ejercicio09CalificaciónFinalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmEjercicio09>("Calificación Final");
+        }
+
+        private void ejercicio18ControlDeInventarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmEjercicio18>("Control de Inventario");
+        }
     }
 }
