@@ -92,7 +92,7 @@ namespace TrabajoGrupalUnidad1_Vargas_Vargas_Vargas
 
         private void ejercicio02ConsumoDeAguaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            AbrirFormulario<FrmEjercicio02>("Consumo de Agua");
         }
 
         private void ejercicio03TablaDeMultiplicarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -146,6 +146,36 @@ namespace TrabajoGrupalUnidad1_Vargas_Vargas_Vargas
         private void ejercicio15SistemaDeVotaciónToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AbrirFormulario<FrmEjercicio15>("Sistema de Votación");
+        }
+
+        private void ejercicio06CajeroAutomáticoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmEjercicio06>("Cajero Automático");
+        }
+
+        private void ejercicio13ClasificaciónDeEmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmEjercicio13>("Clasificación de Empleados");
+        }
+
+        private void ejercicio14DatosDelEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmEjercicio14>("Datos del Empleado");
+        }
+
+        private void ejercicio16RegistroDeMatrículaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmEjercicio16>("Registro de Matrícula");
+        }
+
+        private void ejercicio17TarifaDeTaxiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmEjercicio17>("Tarifa de Taxi");
+        }
+
+        private void ejercicio19MantenimientoDeProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmEjercicio19>("Mantenimiento de Productos");
         }
     }
 }

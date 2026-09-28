@@ -19,10 +19,8 @@ namespace TrabajoGrupalUnidad1_Vargas_Vargas_Vargas.Ejercicios
             if (palabra == "")
             {
                 MessageBox.Show(
-                    "Ingrese una palabra.",
-                    "Dato requerido",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
+                    "Ingrese una palabra.", "Dato requerido",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 txtPalabra.Focus();
                 return;
@@ -53,7 +51,6 @@ namespace TrabajoGrupalUnidad1_Vargas_Vargas_Vargas.Ejercicios
 
                 txtNuevaPalabra.Clear();
                 txtLongitud.Clear();
-
                 txtFrase.Focus();
             }
             else
@@ -65,7 +62,6 @@ namespace TrabajoGrupalUnidad1_Vargas_Vargas_Vargas.Ejercicios
 
                 txtFrase.Clear();
                 txtMayusculas.Clear();
-
                 txtNuevaPalabra.Focus();
             }
         }

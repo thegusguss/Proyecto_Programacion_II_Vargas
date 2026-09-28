@@ -54,28 +54,6 @@ namespace TrabajoGrupalUnidad1_Vargas_Vargas_Vargas.Ejercicios
             cboTurno.SelectedIndex = 0;
             cboEspecialidad.SelectedIndex = 0;
 
-            nudNota.Minimum = 1;
-            nudNota.Maximum = 5;
-            nudNota.DecimalPlaces = 1;
-            nudNota.Increment = 0.1m;
-            nudNota.Value = 3.5m;
-
-            dgvEvaluaciones.AllowUserToAddRows = false;
-            dgvEvaluaciones.AllowUserToDeleteRows = false;
-            dgvEvaluaciones.ReadOnly = true;
-            dgvEvaluaciones.MultiSelect = false;
-            dgvEvaluaciones.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvEvaluaciones.RowHeadersVisible = false;
-
-            txtTurnosAprobados.ReadOnly = true;
-            txtMejorEspecialidad.ReadOnly = true;
-            txtMejorTurno.ReadOnly = true;
-            txtMejorNota.ReadOnly = true;
-            txtPromedioGeneral.ReadOnly = true;
-            txtPromedioPediatria.ReadOnly = true;
-            txtPromedioGinecologia.ReadOnly = true;
-            txtPromedioInternista.ReadOnly = true;
-            txtPromedioNeurologia.ReadOnly = true;
         }
 
         private void CargarDatosIniciales()
@@ -150,8 +128,7 @@ namespace TrabajoGrupalUnidad1_Vargas_Vargas_Vargas.Ejercicios
                 "Especialidad: " + especialidades[columna] + "\n" +
                 "Nota: " + nota.ToString("0.0"),
                 "Evaluación actualizada",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnCalcular_Click(object sender, EventArgs e)
@@ -198,28 +175,18 @@ namespace TrabajoGrupalUnidad1_Vargas_Vargas_Vargas.Ejercicios
 
             decimal promedioGeneral = sumaGeneral / 16;
 
-            txtTurnosAprobados.Text =
-                turnosAprobados.Count > 0
-                ? string.Join(", ", turnosAprobados)
-                : "Ninguno";
+            txtTurnosAprobados.Text =turnosAprobados.Count > 0
+                ? string.Join(", ", turnosAprobados): "Ninguno";
 
             txtMejorEspecialidad.Text = especialidades[columnaMayor];
             txtMejorTurno.Text = turnos[filaMayor];
             txtMejorNota.Text = mayorNota.ToString("0.0");
 
             txtPromedioGeneral.Text = promedioGeneral.ToString("0.00");
-
-            txtPromedioPediatria.Text =
-                (sumaEspecialidades[0] / 4).ToString("0.00");
-
-            txtPromedioGinecologia.Text =
-                (sumaEspecialidades[1] / 4).ToString("0.00");
-
-            txtPromedioInternista.Text =
-                (sumaEspecialidades[2] / 4).ToString("0.00");
-
-            txtPromedioNeurologia.Text =
-                (sumaEspecialidades[3] / 4).ToString("0.00");
+            txtPromedioPediatria.Text = (sumaEspecialidades[0] / 4).ToString("0.00");
+            txtPromedioGinecologia.Text = (sumaEspecialidades[1] / 4).ToString("0.00");
+            txtPromedioInternista.Text = (sumaEspecialidades[2] / 4).ToString("0.00");
+            txtPromedioNeurologia.Text = (sumaEspecialidades[3] / 4).ToString("0.00");
         }
 
         private void btnRestablecer_Click(object sender, EventArgs e)

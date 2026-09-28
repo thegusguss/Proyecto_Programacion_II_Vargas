@@ -72,14 +72,10 @@ namespace TrabajoGrupalUnidad1_Vargas_Vargas_Vargas.Ejercicios
             nuevoContacto.Email = txtEmail.Text.Trim();
 
             contactos.Add(nuevoContacto);
-
             MostrarContactos(contactos);
 
             MessageBox.Show(
-                "Contacto agregado correctamente.",
-                "Agenda de Contactos",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
+                "Contacto agregado correctamente.", "Agenda de Contactos", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             LimpiarCampos();
         }

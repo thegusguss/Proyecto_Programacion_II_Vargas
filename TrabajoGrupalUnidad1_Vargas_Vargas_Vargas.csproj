@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
   <ItemGroup>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\TrabajoGrupalUnidad1_Vargas_Vargas_Vargas.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\TrabajoGrupalUnidad1_Vargas_Vargas_Vargas.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\TrabajoGrupalUnidad1_Vargas_Vargas_Vargas.csproj.GenerateResource.cache" />
     <None Include="Resources\borrar.png" />
     <None Include="Resources\Fondo1.png" />
     <None Include="Resources\like.png" />
@@ -39,6 +44,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -53,11 +59,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\Contacto.cs" />
+    <Compile Include="Ejercicios\FrmEjercicio02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios\FrmEjercicio02.Designer.cs">
+      <DependentUpon>FrmEjercicio02.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ejercicios\FrmEjercicio03.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ejercicios\FrmEjercicio03.Designer.cs">
       <DependentUpon>FrmEjercicio03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicios\FrmEjercicio06.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios\FrmEjercicio06.Designer.cs">
+      <DependentUpon>FrmEjercicio06.cs</DependentUpon>
     </Compile>
     <Compile Include="Ejercicios\FrmEjercicio07.cs">
       <SubType>Form</SubType>
@@ -83,11 +101,47 @@
     <Compile Include="Ejercicios\FrmEjercicio12.Designer.cs">
       <DependentUpon>FrmEjercicio12.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ejercicios\FrmEjercicio13.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios\FrmEjercicio13.Designer.cs">
+      <DependentUpon>FrmEjercicio13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicios\FrmEjercicio14.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios\FrmEjercicio14.Designer.cs">
+      <DependentUpon>FrmEjercicio14.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ejercicios\FrmEjercicio15.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ejercicios\FrmEjercicio15.Designer.cs">
       <DependentUpon>FrmEjercicio15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicios\FrmEjercicio16.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios\FrmEjercicio16.Designer.cs">
+      <DependentUpon>FrmEjercicio16.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicios\FrmEjercicio17.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios\FrmEjercicio17.Designer.cs">
+      <DependentUpon>FrmEjercicio17.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicios\FrmEjercicio19.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios\FrmEjercicio19.Designer.cs">
+      <DependentUpon>FrmEjercicio19.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicios\FrmEjercicio20.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios\FrmEjercicio20.Designer.cs">
+      <DependentUpon>FrmEjercicio20.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -95,6 +149,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
     <Compile Include="PanelPrincipalMDI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,8 +158,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Ejercicios\FrmEjercicio02.resx">
+      <DependentUpon>FrmEjercicio02.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ejercicios\FrmEjercicio03.resx">
       <DependentUpon>FrmEjercicio03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ejercicios\FrmEjercicio06.resx">
+      <DependentUpon>FrmEjercicio06.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ejercicios\FrmEjercicio07.resx">
       <DependentUpon>FrmEjercicio07.cs</DependentUpon>
@@ -118,12 +179,39 @@
     <EmbeddedResource Include="Ejercicios\FrmEjercicio12.resx">
       <DependentUpon>FrmEjercicio12.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ejercicios\FrmEjercicio13.resx">
+      <DependentUpon>FrmEjercicio13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ejercicios\FrmEjercicio14.resx">
+      <DependentUpon>FrmEjercicio14.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ejercicios\FrmEjercicio15.resx">
       <DependentUpon>FrmEjercicio15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ejercicios\FrmEjercicio16.resx">
+      <DependentUpon>FrmEjercicio16.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ejercicios\FrmEjercicio17.resx">
+      <DependentUpon>FrmEjercicio17.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ejercicios\FrmEjercicio19.resx">
+      <DependentUpon>FrmEjercicio19.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ejercicios\FrmEjercicio20.resx">
+      <DependentUpon>FrmEjercicio20.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\TrabajoGrupalUnidad1_Vargas_Vargas_Vargas.Ejercicios.FrmEjercicio03.resources" />
+    <EmbeddedResource Include="obj\Debug\TrabajoGrupalUnidad1_Vargas_Vargas_Vargas.Ejercicios.FrmEjercicio07.resources" />
+    <EmbeddedResource Include="obj\Debug\TrabajoGrupalUnidad1_Vargas_Vargas_Vargas.Ejercicios.FrmEjercicio10.resources" />
+    <EmbeddedResource Include="obj\Debug\TrabajoGrupalUnidad1_Vargas_Vargas_Vargas.Ejercicios.FrmEjercicio11.resources" />
+    <EmbeddedResource Include="obj\Debug\TrabajoGrupalUnidad1_Vargas_Vargas_Vargas.Ejercicios.FrmEjercicio12.resources" />
+    <EmbeddedResource Include="obj\Debug\TrabajoGrupalUnidad1_Vargas_Vargas_Vargas.Ejercicios.FrmEjercicio15.resources" />
+    <EmbeddedResource Include="obj\Debug\TrabajoGrupalUnidad1_Vargas_Vargas_Vargas.Form1.resources" />
+    <EmbeddedResource Include="obj\Debug\TrabajoGrupalUnidad1_Vargas_Vargas_Vargas.PanelPrincipalMDI.resources" />
+    <EmbeddedResource Include="obj\Debug\TrabajoGrupalUnidad1_Vargas_Vargas_Vargas.Properties.Resources.resources" />
     <EmbeddedResource Include="PanelPrincipalMDI.resx">
       <DependentUpon>PanelPrincipalMDI.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,6 +276,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Fondo Login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="obj\Debug\TrabajoGrupalUnidad1_Vargas_Vargas_Vargas.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\TrabajoGrupalUnidad1_Vargas_Vargas_Vargas.exe" />
+    <Content Include="obj\Debug\TrabajoGrupalUnidad1_Vargas_Vargas_Vargas.pdb" />
+    <None Include="Resources\fond19.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
